@@ -1,0 +1,10 @@
+setcookie(name,value,expire,path,domain,secure,httponly);
+So,A cookie with the username and the value SN Chakraborty that is 
+accessible across the entire web server on the current domain and
+will be removed from the browsers cache in seven days use the 
+following----------
+setcookie('username','SN Chakraborty',time()+60*60*24*7,'/')
+Accessing Cookie:
+if(isset($_COOKIE['username']))$username=$_COOKIE['username'];
+Destroy Cookie:
+setcookie('username','SN Chakraborty',time()-2592000,'/');
